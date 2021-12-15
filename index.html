@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> HoltzmannMe </title>
+
+    <script language="javascript">
+        var rev = "fwd";
+
+        function titlebar(val) {
+            var msg = "HoltzmannMe";
+            var res = " ";
+            var speed = 100;
+            var pos = val;
+            msg = "   |-" + msg + "-|";
+            var le = msg.length;
+            if (rev == "fwd") {
+                if (pos < le) {
+                    pos = pos + 1;
+                    scroll = msg.substr(0, pos);
+                    document.title = scroll;
+                    timer = window.setTimeout("titlebar(" + pos + ")", speed);
+                } else {
+                    rev = "bwd";
+                    timer = window.setTimeout("titlebar(" + pos + ")", speed);
+                }
+            } else {
+                if (pos > 0) {
+                    pos = pos - 1;
+                    var ale = le - pos;
+                    scrol = msg.substr(ale, le);
+                    document.title = scrol;
+                    timer = window.setTimeout("titlebar(" + pos + ")", speed);
+                } else {
+                    rev = "fwd";
+                    timer = window.setTimeout("titlebar(" + pos + ")", speed);
+                }
+            }
+        }
+        titlebar(0);
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+
+    <link href="style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="site-wrapper video-background">
+        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=U8YJGwsuJn8', containment:'body', autoPlay:true, mute:false, startAt:1, stopAt: 251, opacity:1, }"></a>
+
+        <div class="overlay"></div>
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+                <div class="inner cover">
+                    <h1 class="cover-heading">HoltzmannMe</h1>
+                    <p class="lead">Lab university of applied sciences</p>
+                    <link href='https://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css'>
+                    <a href="https://github.com/HoltzmannMe">github</a>
+
+                    <a href="https://vk.com/nas_tupilo_utro">vk</a>
+
+                    <a href="https://instagram.com/holtzmann_me">instagram</a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+    <script src="js\device.min.js"></script>
+    <script src="js\jquery.mb.YTPlayer.js"></script>
+    <script src="js\custom.js"></script>
+
+
+
+</body>
+
+</html>
