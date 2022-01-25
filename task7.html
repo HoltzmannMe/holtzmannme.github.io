@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const el = (id) => document.getElementById(id);
+        const val = (id) => el(id).value;
+        const search = () => el("frame").src = "https://www.google.com/maps?output=embed&q="+val("address")+val("city");
+    </script>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe src="https://www.google.com/maps?output=embed" width="60%" height="60%" id="frame"></iframe><br>
+    <h3>Search for a place</h4>
+    Street address: <input id="address" type="text"> City: <input id="city" type="text"> <button onclick="search()">Search</button>
+</body>
+
+</html>
